@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Elrond converters</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">
+</head>
+
+<body class="pb-5">
+<div class="container mt-4">
+    <h1>Converters for Elrond Blockchain</h1>
+    <p>
+        This page offers an easy to use pack of convertors necessary for interacting with Elrond Blockchain.
+    </p>
+
+    <h3>Converters</h3>
+    <div class="card">
+        <div class="card-header">
+            Addresses
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title" id="bech32-to-hex">
+                <a href="#bech32-to-hex" class="text-decoration-none">
+                    Convert from Bech32 address to Hex address
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="Bech32AddressToHexInput">Bech32 address</label>
+                    <input class="form-control" id="Bech32AddressToHexInput" type="text"
+                           value="erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l">
+                </div>
+            </form>
+            <button type="button" id="Bech32AddressToHexBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="Bech32AddressToHexOutput"></div>
+        </div>
+
+        <hr>
+
+        <div class="card-body">
+            <h5 class="card-title" id="hex-to-bech32">
+                <a href="#hex-to-bech32" class="text-decoration-none">
+                    Convert from Hex address to Bech32 address
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="HexToBech32AddressInput">Bech32 address</label>
+                    <input class="form-control" id="HexToBech32AddressInput" type="text"
+                           value="000000000000000000010000000000000000000000000000000000000001ffff">
+                </div>
+            </form>
+            <button type="button" id="HexToBech32AddressBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="HexToBech32AddressOutput"></div>
+        </div>
+    </div>
+
+    <div class="card mt-2">
+        <div class="card-header">
+            Numeric
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title" id="decimal-to-hexadecimal">
+                <a href="#decimal-to-hexadecimal" class="text-decoration-none">
+                    Convert decimal to hexadecimal
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="DecimalToHexInput">Numeric value</label>
+                    <input class="form-control" id="DecimalToHexInput" type="text" value="91">
+                </div>
+            </form>
+            <button type="button" id="DecimalToHexBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="DecimalToHexOutput"></div>
+        </div>
+
+        <hr>
+
+        <div class="card-body">
+            <h5 class="card-title" id="hexadecimal-to-decimal">
+                <a href="#hexadecimal-to-decimal" class="text-decoration-none">
+                    Convert hexadecimal to decimal
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="HexToDecimalInput">Hex value</label>
+                    <input class="form-control" id="HexToDecimalInput" type="text" value="5b">
+                </div>
+            </form>
+            <button type="button" id="HexToDecimalBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="HexToDecimalOutput"></div>
+        </div>
+    </div>
+
+    <div class="card mt-2">
+        <div class="card-header">
+            Amount denomination
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title" id="amount-to-denominated">
+                <a href="#amount-to-denominated" class="text-decoration-none">
+                    Amount to denominated amount
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="AmountToDenominatedInput">Numeric value</label>
+                    <input class="form-control" id="AmountToDenominatedInput" type="text" value="10.5">
+                </div>
+            </form>
+            <button type="button" id="AmountToDenominatedBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="AmountToDenominatedOutput"></div>
+        </div>
+
+        <hr>
+
+        <div class="card-body">
+            <h5 class="card-title" id="denominated-to-amount">
+                <a href="#denominated-to-amount" class="text-decoration-none">
+                    Denominated amount to amount
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="DenominatedToAmountInput">Denominated value</label>
+                    <input class="form-control" id="DenominatedToAmountInput" type="text" value="10500000000000000000">
+                </div>
+            </form>
+            <button type="button" id="DenominatedToAmountBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="DenominatedToAmountOutput"></div>
+        </div>
+    </div>
+
+    <div class="card mt-2">
+        <div class="card-header">
+            String converters
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title" id="string-to-hexadecimal">
+                <a href="#string-to-hexadecimal" class="text-decoration-none">
+                    Convert string to hexadecimal encoded string
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="StringToHexInput">String value</label>
+                    <input class="form-control" id="StringToHexInput" type="text" value="ok">
+                </div>
+            </form>
+            <button type="button" id="StringToHexBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="StringToHexOutput"></div>
+        </div>
+
+        <hr>
+
+        <div class="card-body">
+            <h5 class="card-title" id="hexadecimal-to-string">
+                <a href="#hexadecimal-to-string" class="text-decoration-none">
+                    Convert hexadecimal encoded string to string
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="HexToStringInput">Hex value</label>
+                    <input class="form-control" id="HexToStringInput" type="text" value="6f6b">
+                </div>
+            </form>
+            <button type="button" id="HexToStringBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="HexToStringOutput"></div>
+        </div>
+
+        <hr>
+
+        <div class="card-body">
+            <h5 class="card-title" id="string-to-base64">
+                <a href="#string-to-base64" class="text-decoration-none">
+                    Convert string to base64
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="StringToBase64Input">String value</label>
+                    <input class="form-control" id="StringToBase64Input" type="text" value="text">
+                </div>
+            </form>
+            <button type="button" id="StringToBase64Btn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="StringToBase64Output"></div>
+        </div>
+
+        <hr>
+
+        <div class="card-body">
+            <h5 class="card-title" id="base64-to-string">
+                <a href="#base64-to-string" class="text-decoration-none">
+                    Convert base64 encoded string to string
+                </a>
+            </h5>
+            <form>
+                <div class="form-group">
+                    <label class="control-label" for="Base64ToStringInput">Base64 string value</label>
+                    <input class="form-control" id="Base64ToStringInput" type="text" value="dGV4dA==">
+                </div>
+            </form>
+            <button type="button" id="Base64ToStringBtn" class="btn btn-primary btn-sm">Convert</button>
+            <div id="Base64ToStringOutput"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="text-center p-3">
+    Feel free to contribute <a href="https://github.com/bogdan-rosianu/elrond-converters">here</a>.
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+<script src="out/bundle.js"></script>
+</body>
+
+</html>
