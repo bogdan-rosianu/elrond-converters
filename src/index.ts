@@ -52,6 +52,20 @@ $(async function () {
         output("HexToDecimalOutput", intValue)
     });
 
+    $("#DecimalToBase64Btn").click(async function () {
+        let decimalValue = $("#DecimalToBase64Input").val();
+        let buff = Buffer.from(decimalValue, 'ascii');
+
+        output("DecimalToBase64Output", buff.toString("base64"))
+    });
+
+    $("#Base64ToDecimalBtn").click(async function () {
+        let base64Value = $("#Base64ToDecimalInput").val();
+        let buff = Buffer.from(base64Value, 'base64');
+
+        output("Base64ToDecimalOutput", buff.toString("ascii"))
+    });
+
     $("#AmountToDenominatedBtn").click(async function () {
         let input = $("#AmountToDenominatedInput").val();
         let balance = Balance.eGLD(input)
@@ -84,6 +98,20 @@ $(async function () {
     $("#Base64ToStringBtn").click(async function () {
         let input = $("#Base64ToStringInput").val();
         output("Base64ToStringOutput", Buffer.from(input, 'base64').toString('ascii'))
+    });
+
+    $("#HexToBase64Btn").click(async function () {
+        let hexValue = $("#HexToBase64Input").val();
+        let buff = Buffer.from(hexValue, 'hex');
+
+        output("HexToBase64Output", buff.toString("base64"))
+    });
+
+    $("#Base64ToHexBtn").click(async function () {
+        let base64Value = $("#Base64ToHexInput").val();
+        let buff = Buffer.from(base64Value, 'base64');
+
+        output("Base64ToHexOutput", buff.toString("hex"))
     });
 });
 
