@@ -31,7 +31,11 @@ $(async function () {
         let intValue = $("#DecimalToHexInput").val();
 
         let bn = new BigNumber(intValue, 10);
-        output("DecimalToHexOutput", bn.toString(16))
+        let bnStr = bn.toString(16);
+        if(bnStr.length % 2 != 0) {
+            bnStr = "0" + bnStr;
+        }
+        output("DecimalToHexOutput", bnStr)
     });
 
     $("#HexToDecimalBtn").click(async function () {
