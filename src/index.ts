@@ -1,4 +1,5 @@
 import {Address, Balance} from "@elrondnetwork/erdjs";
+import BigNumber from "bignumber.js";
 
 declare var $: any;
 
@@ -27,29 +28,18 @@ $(async function () {
 
 
     $("#DecimalToHexBtn").click(async function () {
-        let hexValue = $("#DecimalToHexInput").val();
-        let intValue = parseInt(hexValue, 10)
+        let intValue = $("#DecimalToHexInput").val();
 
-        if (intValue.toString(10) != hexValue) {
-            outputError("DecimalToHexOutput", "invalid numeric value")
-        }
-
-        let valueToDisplay = intValue.toString(16);
-        if (valueToDisplay.length % 2 != 0) {
-            valueToDisplay = "0" + valueToDisplay;
-        }
-        output("DecimalToHexOutput", valueToDisplay)
+        let bn = new BigNumber(intValue, 10);
+        output("DecimalToHexOutput", bn.toString(16))
     });
 
     $("#HexToDecimalBtn").click(async function () {
         let hexValue = $("#HexToDecimalInput").val();
-        let intValue = parseInt(hexValue, 16)
 
-        if (intValue.toString(16) != hexValue) {
-            outputError("HexToDecimalOutput", "invalid hex value")
-        }
+        let bn = new BigNumber(hexValue, 16);
 
-        output("HexToDecimalOutput", intValue)
+        output("HexToDecimalOutput", bn.toString(10))
     });
 
     $("#DecimalToBase64Btn").click(async function () {

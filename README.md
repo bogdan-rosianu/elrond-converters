@@ -4,6 +4,8 @@ It runs in browser and allows one to make the conversions that are necessary for
 
 ### Prerequisites
 
+Download locally the needed libraries (bootstrap.min.css, bootstrap.min.js and jquery-3.5.1.slim.min.js)
+
 `browserify` and `http-server` are required. They can be installed as follows:
 
     npm install --global browserify

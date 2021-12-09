@@ -3,16 +3,46 @@
 
 <head>
     <title>Elrond converters</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
 </head>
 
 <body class="pb-5">
+
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-light p-4">
+            <a href="#bech32-to-hex">Bech32 -> Hex</a> |
+            <a href="#hex-to-bech32">Hex -> Bech32</a> |
+
+            <a href="#decimal-to-hexadecimal">Decimal -> Hex</a> |
+            <a href="#hexadecimal-to-decimal">Hex -> Decimal</a> |
+            <a href="#decimal-to-base64">Decimal -> Base64</a> |
+            <a href="#base64-to-decimal">Base64 -> Decimal</a> |
+
+            <a href="#amount-to-denominated">EGLD amount denomination</a> |
+
+            <a href="#string-to-hexadecimal">String -> Hex</a> |
+            <a href="#hexadecimal-to-string">Hex -> String</a> |
+            <a href="#string-to-base64">String -> Base64</a> |
+            <a href="#base64-to-string">String -> Base64</a> |
+            <a href="#hex-to-base64">Hex -> Base64</a> |
+            <a href="#base64-to-hex">Base64 -> Hex</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-primary">
+        <button class="btn btn-light btn-sm" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
+
 <div class="container mt-4">
     <h1>Converters for Elrond Blockchain</h1>
     <p>
         This page offers an easy to use pack of convertors necessary for interacting with Elrond Blockchain.
     </p>
-
     <h3>Converters</h3>
     <div class="card">
         <div class="card-header">
@@ -137,8 +167,8 @@
             Amount denomination
         </div>
 
-        <div class="card-body">
-            <h5 class="card-title" id="amount-to-denominated">
+        <div class="card-body" id="amount-to-denominated">
+            <h5 class="card-title">
                 <a href="#amount-to-denominated" class="text-decoration-none">
                     Amount to denominated amount
                 </a>
@@ -290,9 +320,9 @@
     Feel free to contribute <a href="https://github.com/bogdan-rosianu/elrond-converters">here</a>.
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+<script src="./jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+<script src="./bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 <script src="out/bundle.js"></script>
