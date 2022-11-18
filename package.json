@@ -12,7 +12,7 @@
     "serve": "http-server -p 7777"
   },
   "dependencies": {
-    "@elrondnetwork/erdjs": "^2.3.0",
+    "@elrondnetwork/erdjs": "11.0.0",
     "bignumber.js": "^9.0.0"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 ### General
-Elrond convertors tool that is written in typescript and uses `erdjs`.
+MultiversX converters tool that is written in typescript and uses `erdjs`.
 It runs in browser and allows one to make the conversions that are necessary for interacting with the Elrond Blockchain.
 
 ### Prerequisites

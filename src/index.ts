@@ -1,5 +1,6 @@
-import {Address, Balance} from "@elrondnetwork/erdjs";
+import {Address} from "@elrondnetwork/erdjs";
 import BigNumber from "bignumber.js";
+import {TokenPayment} from "@elrondnetwork/erdjs/out";
 
 declare var $: any;
 
@@ -62,16 +63,16 @@ $(async function () {
 
     $("#AmountToDenominatedBtn").click(async function () {
         let input = $("#AmountToDenominatedInput").val();
-        let balance = Balance.eGLD(input)
+        let balance = TokenPayment.egldFromAmount(input)
 
         output("AmountToDenominatedOutput", balance.toString())
     });
 
     $("#DenominatedToAmountBtn").click(async function () {
         let input = $("#DenominatedToAmountInput").val();
-        let balance = Balance.fromString(input)
+        let balance = TokenPayment.egldFromBigInteger(input)
 
-        output("DenominatedToAmountOutput", balance.toCurrencyString())
+        output("DenominatedToAmountOutput", balance.toPrettyString())
     });
 
     $("#StringToHexBtn").click(async function () {
